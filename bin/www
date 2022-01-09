@@ -37,6 +37,7 @@ wss.on("connection", (ws) => {
   ws.on("message", (message)  => {
     console.log("Hello from the server! You sent: %s", message);
   });
+  ws.send("Hello from the server! You sent: %s", message);
 });
 server.on("listening", onListening);
 
