@@ -9,9 +9,9 @@ function getSettings() {
 }
 
 function writeSettings(newSettings) {
-  const settingsJson = JSON.stringify(newSettings, null, 2);
+  const settingsJSON = JSON.stringify(newSettings, null, 2);
   try {
-    fs.writeFileSync(settingsFilePath, settingsJson);
+    fs.writeFileSync(settingsFilePath, settingsJSON);
     return true;
   } catch (e) {
     return false;
