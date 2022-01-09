@@ -2,19 +2,20 @@ const fs = require('fs');
 const path = require('path');
 
 const settingsFilePath = path.join(__dirname, '../json/settings.json');
+
 function getSettings() {
-  const settingsData = fs.readFileSync(path.join(settingsFilePath));
+  const settingsData = fs.readFileSync(settingsFilePath);
   return JSON.parse(settingsData);
 }
 
 function writeSettings(newSettings) {
- const settingsJson = JSON.stringify(newSettings, null, 2);
- try {
-   fs.writeFileSync(settingsFilePath, settingsJson);
-   return true;
- } catch (e) {
-   return false;
- }
+  const settingsJson = JSON.stringify(newSettings, null, 2);
+  try {
+    fs.writeFileSync(settingsFilePath, settingsJson);
+    return true;
+  } catch (e) {
+    return false;
+  }
 }
 
 function getDefaultDir() {
