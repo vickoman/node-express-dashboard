@@ -1,5 +1,7 @@
 # Node real-time log dashboard
 
+### DEMO GIF
+![Server log realtime](https://raw.githubusercontent.com/vickoman/node-express-dashboard/master/log-server-realtime.gif "Log server with Realtime")
 To start the application, in a terminal type: <code>npm start</code>
 
 Then, in a browser, go to: <code>http://localhost:3000/</code>
